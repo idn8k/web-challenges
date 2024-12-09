@@ -5,15 +5,18 @@
 /* Task 1: First, we want to adjust how the size of our elements is calculated in CSS. Do you know how to switch from "content-box" to "border-box"? */
 
 /* Your solution */
+* {
+   box-sizing: border-box;
+}
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements in your code via inheritance. Which selector do we need for this? */
 
 /* Add selector */
- {
-  font-family: monospace;
-  font-size: 1rem;
-  line-height: 1.5;
-  background-color: LemonChiffon;
+body {
+   font-family: monospace;
+   font-size: 1rem;
+   line-height: 1.5;
+   background-color: LemonChiffon;
 }
 
 /* ------- Headings Part 1 ------- */
@@ -21,6 +24,10 @@
 /* Task 3: Setting the line height to 1.5 is good for texts, for accessibility reasons, but it seems too much for headings. Let's change this by giving our headings a line height of 1.2. */
 
 /* Your solution */
+.subtitle,
+.title {
+   line-height: 1.2;
+}
 
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside the next CSS rule:
 
@@ -31,7 +38,11 @@
 */
 
 .title {
-  /* Your solution */
+   background: white;
+   margin: 0;
+   padding: 10px;
+   text-align: center;
+   /* Your solution */
 }
 
 /* ------- Sections ------- */
@@ -45,7 +56,15 @@
 */
 
 section {
-  /* Your solution */
+   /* Your solution */
+   background: white;
+   padding: 20px;
+   margin: 10px;
+   border-left: 5px solid orange;
+}
+
+.favourites {
+   border-left: 5px solid gold;
 }
 
 /* ------- Headings Part 2 ------- */
@@ -59,7 +78,16 @@ section {
 */
 
 .subtitle {
-  /* Your solution */
+   /* Your solution */
+   display: inline;
+   padding: 0 10px;
+   border-left: 3px solid gold;
+   border-right: 3px solid gold;
+}
+
+.favourites h2 {
+   border-left: 3px solid orange;
+   border-right: 3px solid orange;
 }
 
 /* ------- List ------- */
@@ -67,21 +95,21 @@ section {
 /* Task 7: Finally, let's style our list with of favorite Pokémon. Which selector do we need? Also, add values for padding. */
 
 /* Add selector */
- {
-  list-style: "🧡";
-  padding-left: /* Add value */ ;
+ul {
+   list-style: '🧡';
+   padding-left: 20px;
 }
 
 /* Add selector */
- {
-  padding-left: /* Add value */ ;
+li {
+   padding-left: 10px;
 }
 
 /* ------- The End -------- */
 
 .image-fluid {
-  width: 100%;
-  height: auto;
+   width: 100%;
+   height: auto;
 }
 
 /* Note: After finishing all tasks, this class should also work. The image should adjust its size flexibly according to the width of the viewport. */
