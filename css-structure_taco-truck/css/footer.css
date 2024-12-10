@@ -1,0 +1,37 @@
+footer {
+  background: #000;
+  height: 80px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.imprint {
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  width: 50%;
+}
+
+.imprint p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+figure {
+  margin: 10px;
+}
