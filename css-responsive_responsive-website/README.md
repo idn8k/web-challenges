@@ -6,13 +6,13 @@ Make sure to take a good look at the preview screens.
 
 ## Tasks
 
-- Familiarize yourself with the `./index.html` and `./css/styles.css` files.
-- Review the preview screens below to get an idea of the necessary adjustments.
-- Determine the number of breakpoints to achieve a responsive layout.
-- Identify the changes needed to meet the visual guidelines shown in the preview screens.
-- ... enjoy!
+-  Familiarize yourself with the `./index.html` and `./css/styles.css` files.
+-  Review the preview screens below to get an idea of the necessary adjustments.
+-  Determine the number of breakpoints to achieve a responsive layout.
+-  Identify the changes needed to meet the visual guidelines shown in the preview screens.
+-  ... enjoy!
 
-### Preview Screens
+## Preview Screens
 
 #### Mobile Screens
 
@@ -43,4 +43,4 @@ Run `npm run start` to start a development server and open [localhost:3000](http
 
 You can use the following command:
 
-- `npm run start` to start a development server
+-  `npm run start` to start a development server
