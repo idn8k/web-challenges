@@ -37,5 +37,6 @@ console.log('Number of likes:', numLikes);
 console.log('username:', username);
 console.log('Reported:', isReported);
 console.log('Number of likes:', newNumLikes);
+// lknsd
 
 // --^-- write your code here --^--
