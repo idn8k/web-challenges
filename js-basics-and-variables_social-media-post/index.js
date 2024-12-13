@@ -38,4 +38,5 @@ console.log('username:', username);
 console.log('Reported:', isReported);
 console.log('Number of likes:', newNumLikes);
 
+console.log('ignore');
 // --^-- write your code here --^--
