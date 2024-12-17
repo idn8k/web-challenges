@@ -10,6 +10,34 @@ console.clear();
 
 // --v-- write your code here --v--
 
+// const bookShop = [
+//    {
+//       bookTitle: 'beloved',
+//       author: 'tony morrison',
+//       rating: 5,
+//       copiesSold: 1000,
+//    },
+//    {
+//       bookTitle: '1984',
+//       author: 'george orwell',
+//       rating: 4,
+//       copiesSold: 2000,
+//    },
+//    {
+//       bookTitle: 'animal farm',
+//       author: 'george orwell',
+//       rating: 3,
+//       copiesSold: 3000,
+//    },
+// ];
+
+const book1 = {
+   bookTitle: '1984',
+   author: 'george orwell',
+   rating: 4,
+   copiesSold: 2000,
+};
+
 // --^-- write your code here --^--
 
 /*
@@ -27,6 +55,18 @@ Then:
 */
 
 // --v-- write your code here --v--
+// console.log(book1.bookTitle);
+// console.log(book1.author);
+// console.log(book1.rating);
+// console.log(book1.copiesSold);
+
+// book1.copiesSold++
+// book1.rating++
+
+// console.log(book1.bookTitle);
+// console.log(book1.author);
+// console.log(book1.rating);
+// console.log(book1.copiesSold);
 
 // --^-- write your code here --^--
 
@@ -41,4 +81,16 @@ Then:
 
 // --v-- write your code here --v--
 
+const logBookData = () => {
+   console.log(book1.bookTitle);
+   console.log(book1.author);
+   console.log(book1.rating);
+   console.log(book1.copiesSold);
+   book1.copiesSold++;
+   console.log(book1);
+   book1.copiesSold++;
+   console.log(book1);
+};
+
+logBookData();
 // --^-- write your code here --^--
