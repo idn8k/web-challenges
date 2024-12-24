@@ -55,8 +55,4 @@ function updateOutputColor(pizza_one, pizza_two) {
    }
 }
 
-// // Get the value of a CSS variable
-// const root = document.documentElement;
-// const mainColor = getComputedStyle(root).getPropertyValue('--main-color').trim();
 
-// console.log(mainColor); // Outputs: #3498db
