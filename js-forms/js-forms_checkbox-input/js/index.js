@@ -5,20 +5,37 @@ const tosError = document.querySelector('[data-js="tos-error"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
 
 function hideTosError() {
-  tosError.setAttribute("hidden", "");
+   tosError.setAttribute('hidden', 'true');
 }
 
 function showTosError() {
-  tosError.removeAttribute("hidden");
+   tosError.removeAttribute('hidden', '');
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+tosCheckbox.addEventListener('change', () => {
+   if (tosError.getAttribute('hidden')) {
+      showTosError();
+   } else {
+      hideTosError();
+   }
+});
 
-  // --v-- write your code here --v--
+form.addEventListener('submit', (event) => {
+   event.preventDefault();
+   const formData = new FormData(event.target);
+   const data = Object.fromEntries(formData);
+   console.log('🚀 ~ form.addEventListener ~ data:', data);
 
-  // --^-- write your code here --^--
+   // --v-- write your code here --v--
+   if (!data.tos) {
+      tosError.removeAttribute('hidden');
+      return;
+   } else {
+      hideTosError();
+   }
 
-  // eslint-disable-next-line no-alert
-  alert("Form submitted");
+   // --^-- write your code here --^--
+
+   // eslint-disable-next-line no-alert
+   alert('Form submitted');
 });
