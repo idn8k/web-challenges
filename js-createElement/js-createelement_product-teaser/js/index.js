@@ -10,14 +10,14 @@ const price = '149,99 €';
 const imageSrc =
    'https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640';
 
-//-- Elements ↓ //
+//-- ↓ Elements ↓ --//
 const body = document.querySelector('body');
 
 const article = document.createElement('article');
 article.classList.add('product');
 
-const section = document.createElement('section');
-section.classList.add('product_body');
+const productBody = document.createElement('section');
+productBody.classList.add('product__body');
 
 const textContainer = document.createElement('div');
 textContainer.classList.add('product__text-container');
@@ -42,14 +42,23 @@ const imgContainer = document.createElement('div');
 imgContainer.classList.add('product__image-container');
 
 const img = document.createElement('img');
-img.classList.add('product__image');
 img.src = imageSrc;
+img.classList.add('product__image');
 
-//-- Elements ↑ //
+const productFooter = document.createElement('footer');
+productFooter.classList.add('product__footer');
+
+const productPrice = document.createElement('span');
+productFooter.classList.add('product__price');
+
+const buyBtn = document.createElement('button');
+buyBtn.classList.add('product__buy-button');
+
+//-- ↑ Elements ↑ --//
 
 body.append(article);
-article.append(section);
-section.append(textContainer);
+article.append(productBody);
+productBody.append(textContainer);
 textContainer.append(productNameTitle);
 productNameTitle.textContent = productName;
 textContainer.append(categories);
@@ -62,5 +71,17 @@ category_3.textContent = category3;
 textContainer.append(productDescription);
 productDescription.textContent = description;
 
-// imgContainer.append(img);
-// src.appendChild(img);
+productBody.append(imgContainer);
+imgContainer.append(img);
+
+article.append(productFooter);
+productFooter.append(productPrice);
+productPrice.textContent = price;
+
+productFooter.append(buyBtn);
+buyBtn.textContent = 'Buy';
+
+buyBtn.addEventListener('click', () => {
+   console.log('product name:', productName);
+   console.log('product price:', price);
+});
