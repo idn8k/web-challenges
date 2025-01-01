@@ -2,18 +2,46 @@ console.clear();
 
 const starContainer = document.querySelector('[data-js="star-container"]');
 
-function renderStars() {
-   // Reset the star container before re-rendering stars
+function renderStars(filledStars) {
    starContainer.innerHTML = '';
 
-   // --v-- write or modify code below this line --v--
-   function test() {
-      console.log('test');
+   if (filledStars) {
+      for (let i = 1; i <= filledStars; i++) {
+         const star = document.createElement('img');
+
+         star.src = '../assets/star-filled.svg';
+
+         star.addEventListener('click', () => {
+            console.log('click');
+         });
+
+         starContainer.append(star);
+      }
+
+      for (let i = 1; i <= 5 - filledStars; i++) {
+         const star = document.createElement('img');
+
+         star.src = '../assets/star-empty.svg';
+
+         star.addEventListener('click', () => {
+            console.log('click');
+         });
+
+         starContainer.append(star);
+      }
+   } else {
+      for (let i = 1; i <= 5; i++) {
+         const star = document.createElement('img');
+
+         star.src = '../assets/star-empty.svg';
+
+         star.addEventListener('click', () => {
+            console.log('click');
+         });
+
+         starContainer.append(star);
+      }
    }
-
-   console.log('test');
-
-   // --^-- write or modify code above this line --^--
 }
 
-renderStars();
+renderStars(3);
