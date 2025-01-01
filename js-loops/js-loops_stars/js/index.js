@@ -11,6 +11,8 @@ function renderStars() {
       console.log('test');
    }
 
+   console.log('test');
+
    // --^-- write or modify code above this line --^--
 }
 
