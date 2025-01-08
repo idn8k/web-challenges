@@ -7,9 +7,9 @@ import { zooAnimals } from '../utils/db.js';
 // console.log(zooAnimals);
 
 function hasAnimal(animals, animalName) {
-   // console.log(animals.includes(animalName));
-   // console.log(animals);
-   console.log(animalName, typeof animalName);
+   console.log(typeof animalName, animalName);
+
+   animals.filter((animal) => animal === console.log(typeof animal, animal));
 }
 
 // Bonus:
@@ -36,6 +36,7 @@ animalForm.addEventListener('submit', (event) => {
       ? `Yes, we have ${searchQuery}`
       : `No, we don't have ${searchQuery}`;
 });
+
 zooAnimals.forEach((animal) => {
    const tag = document.createElement('span');
    tag.classList.add('tag');
