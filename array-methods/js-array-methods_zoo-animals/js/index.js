@@ -7,7 +7,9 @@ import { zooAnimals } from '../utils/db.js';
 // console.log(zooAnimals);
 
 function hasAnimal(animals, animalName) {
-   console.log(animals.includes(animalName));
+   // console.log(animals.includes(animalName));
+   // console.log(animals);
+   console.log(animalName, typeof animalName);
 }
 
 // Bonus:
