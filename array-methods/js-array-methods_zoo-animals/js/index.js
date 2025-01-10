@@ -9,7 +9,7 @@ import { zooAnimals } from '../utils/db.js';
 function hasAnimal(animals, animalName) {
    console.log(typeof animalName, animalName);
 
-   animals.filter((animal) => animal === console.log(typeof animal, animal));
+   return animals.includes((animal) => animal === animalName);
 }
 
 // Bonus:
