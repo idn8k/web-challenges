@@ -1,3 +1,4 @@
+'use strict';
 console.clear();
 
 /*
@@ -6,7 +7,9 @@ Use array destructuring to extract the variables `name`, `price`, and `quantity`
 Make sure to export your variable as shown in the example below to make the tests work.
 */
 
-const item = ["Egg", 0.25, 12];
+const item = ['Egg', 0.25, 12];
+const [name, price, quantity] = item;
+console.log(name, price, quantity);
 
 // Example: export const [ value1, value2 ] = array;
 
@@ -15,7 +18,9 @@ EXERCISE 2
 Use array destructuring to extract the variables `firstNameOfChris`, `lastNameOfChris` and `ageOfChris`.
 */
 
-const personChris = [12, "Chris", "Owen"];
+const personChris = [12, 'Chris', 'Owen'];
+const [ageOfChris, firstNameOfChris, lastNameOfChris] = personChris;
+console.log(ageOfChris, firstNameOfChris, lastNameOfChris);
 
 /*
 EXERCISE 3
@@ -23,7 +28,8 @@ Use array destructuring to extract the variables `firstNameOfAlex` and `lastName
 Ensure no unused variables remain.
 */
 
-const personAlex = ["Alex", 12, "Main"];
+const personAlex = ['Alex', 12, 'Main'];
+const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
 
 /*
 EXERCISE 4
@@ -31,7 +37,9 @@ Use array destructuring to extract the last name from the array
 as variable called `lastName`.
 */
 
-const students = ["Christina", "Jon", "Alexandare"];
+const students = ['Christina', 'Jon', 'Alexandare'];
+const [, , lastName] = students;
+console.log(lastName);
 
 /*
 EXERCISE 5
@@ -39,7 +47,9 @@ Use array destructuring to extract all names from the nested array `nestedStuden
 Assign each name to a variable called "student1" through "student5", in the given order.
 */
 
-const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
+const nestedStudents = ['Chris', ['Ahmad', 'Antigoni'], ['Toby', 'Sam']];
+const [student1, [student2, student3], [student4, student5]] = nestedStudents;
+console.log(student1, student2, student3, student4, student5);
 
 /*
 EXERCISE 6
@@ -49,10 +59,12 @@ Keep in mind that you need to export the variable `result` to make the test work
 
 const values = [1, 6, 7, 9, 12, 5, 4];
 
-const result = add(1); // Spread values inside this function call
+const result = add(1, ...values); // Spread values inside this function call
 
 function add(...values) {
-  return values.reduce(
-    (previousValue, currentValue) => previousValue + currentValue
-  );
+   return values.reduce(
+      (previousValue, currentValue) => previousValue + currentValue
+   );
 }
+
+console.log(result);
