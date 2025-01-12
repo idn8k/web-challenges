@@ -7,9 +7,11 @@ import { zooAnimals } from '../utils/db.js';
 // console.log(zooAnimals);
 
 function hasAnimal(animals, animalName) {
-   console.log(typeof animalName, animalName);
+   const animalToLowerCase = animals.map((animal) => {
+      return animal.toLowerCase();
+   });
 
-   return animals.includes((animal) => animal === animalName);
+   return animalToLowerCase.includes(animalName.toLowerCase());
 }
 
 // Bonus:
@@ -27,6 +29,7 @@ const output = document.querySelector("[data-js='output']");
 animalForm.addEventListener('submit', (event) => {
    event.preventDefault();
    const searchQuery = event.target.searchQuery.value;
+
    output.textContent = '';
    if (searchQuery.trim() === '') {
       return;
