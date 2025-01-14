@@ -1,5 +1,9 @@
-import "./styles.css";
+import './styles.css';
 
 export default function App() {
-  return <div>Say hello...</div>;
+   return <HellowWorld />;
+}
+
+function HellowWorld() {
+   return <h1>Hello World</h1>;
 }
