@@ -1,3 +1,25 @@
+function Button({ color, disabled, text, onClick }) {
+   return (
+      <button
+         disabled={disabled}
+         style={{ backgroundColor: `${color}` }}
+         onClick={onClick}
+      >
+         {text}
+      </button>
+   );
+}
+
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+   function handleClick() {
+      console.log('Click');
+   }
+   return (
+      <Button
+         color="green"
+         disabled={false}
+         text="red"
+         onClick={handleClick}
+      />
+   );
 }
