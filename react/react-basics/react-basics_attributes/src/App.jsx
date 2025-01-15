@@ -1,5 +1,25 @@
-import "./styles.css";
+import './styles.css';
 
 export default function App() {
-  return <article>Replace me with an article</article>;
+   return <Article />;
+}
+
+function Article() {
+   return (
+      <article>
+         <h2 className="article__title">title</h2>
+         <label htmlFor="input"></label>
+
+         <input
+            type="text"
+            id="input"
+         />
+         <a
+            href="https://en.wikipedia.org/wiki/Bear"
+            className="article__link"
+         >
+            A Bear
+         </a>
+      </article>
+   );
 }
