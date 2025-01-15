@@ -1,33 +1,33 @@
 console.clear();
 
 const animalStrings = [
-  "cat",
-  "dog",
-  "elephant",
-  "rabbit",
-  "lion",
-  "tiger",
-  "horse",
-  "giraffe",
-  "zebra",
-  "penguin",
-  "polar bear",
-  "panda",
-  "koala",
-  "kangoroo",
-  "monkey",
-  "sloth",
-  "hippo",
-  "rhino",
+   'cat',
+   'dog',
+   'elephant',
+   'rabbit',
+   'lion',
+   'tiger',
+   'horse',
+   'giraffe',
+   'zebra',
+   'penguin',
+   'polar bear',
+   'panda',
+   'koala',
+   'kangoroo',
+   'monkey',
+   'sloth',
+   'hippo',
+   'rhino',
 ];
 
-const hippoExists = null;
+const hippoExists = animalStrings.includes('hippo');
 
 // Hint: You can pass the starting index as second parameter.
 const catStartingFromIndexFiveExists = null;
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterP = null;
+const firstAnimalStartingWithLetterP = animalStrings.startswith('p');
 
 const indexOfGiraffe = null;
 
@@ -53,12 +53,12 @@ const everyAnimalHasMoreThanTwoLetters = null;
 const sumOfAllAnimalCharacters = null;
 
 export {
-  hippoExists,
-  catStartingFromIndexFiveExists,
-  firstAnimalStartingWithLetterP,
-  indexOfGiraffe,
-  animalsSortedAlphabetically,
-  anyAnimalEndsWithLetterZ,
-  everyAnimalHasMoreThanTwoLetters,
-  sumOfAllAnimalCharacters,
+   hippoExists,
+   catStartingFromIndexFiveExists,
+   firstAnimalStartingWithLetterP,
+   indexOfGiraffe,
+   animalsSortedAlphabetically,
+   anyAnimalEndsWithLetterZ,
+   everyAnimalHasMoreThanTwoLetters,
+   sumOfAllAnimalCharacters,
 };
