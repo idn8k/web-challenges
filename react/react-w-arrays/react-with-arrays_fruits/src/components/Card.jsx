@@ -1,5 +1,13 @@
-import "./Card.css";
+import './Card.css';
 
-export default function Card({ name }) {
-  return <p className="card">{name}</p>;
+export default function Card({ name, color }) {
+   console.log(color);
+   return (
+      <p
+         style={{ backgroundColor: `${color}` }}
+         className="card"
+      >
+         {name}
+      </p>
+   );
 }
