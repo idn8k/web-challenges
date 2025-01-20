@@ -105,10 +105,15 @@ console.log(
 // Make sure to use toSorted() instead.
 
 const animalsSortedAlphabetically = animals.toSorted();
-
 console.log('🚀 ~ animalsSortedAlphabetically:', animalsSortedAlphabetically);
 
-const animalsSortedByWeightStartingWithLowest = null;
+const animalsSortedByWeightStartingWithLowest = animals.toSorted(
+   (animal) => animal.weight
+);
+console.log(
+   '🚀 ~ animalsSortedByWeightStartingWithLowest:',
+   animalsSortedByWeightStartingWithLowest
+);
 
 // Note:
 // - reverse() mutates the original array (like sort() does), which is bad.
