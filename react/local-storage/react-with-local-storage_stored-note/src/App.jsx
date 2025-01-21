@@ -7,8 +7,10 @@ import Note from './components/Note';
 import './styles.css';
 
 export default function App() {
-   const [note, setNote] = useLocalStorageState('');
-   const [font, setFont] = useLocalStorageState('system-ui');
+   const [note, setNote] = useLocalStorageState('notes', { defaultValue: '' });
+   const [font, setFont] = useLocalStorageState('system-ui', {
+      defaultValue: 'times',
+   });
 
    function handleNoteChange(newNote) {
       setNote(newNote);
