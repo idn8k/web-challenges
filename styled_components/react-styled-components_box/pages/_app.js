@@ -1,11 +1,10 @@
-import { GlobalStyle } from "../styles";
-import "../components/BoxWithClassName/BoxWithClassName.css";
+import { GlobalStyle } from '../styles';
 
 export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </>
-  );
+   return (
+      <>
+         <GlobalStyle />
+         <Component {...pageProps} />
+      </>
+   );
 }
