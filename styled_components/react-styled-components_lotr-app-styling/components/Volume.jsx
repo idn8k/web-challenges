@@ -1,10 +1,27 @@
 import Image from 'next/image';
+import styled from 'styled-components';
 
-export default function Volume() {
+import { volumes } from '@/lib/data';
+
+const StyledVolumeContainer = styled.div`
+   height: 40%;
+   width: 100%;
+   background: red;
+`;
+
+const StyledHeaderContainer = styled.div`
+   /* height: 30%; */
+   background: green;
+`;
+
+export default function Volume({ volume }) {
+   const { title, description, cover, books } = volume;
    return (
-      <div>
-         <h1>{title}</h1>
-         <p>{description}</p>
+      <StyledVolumeContainer>
+         <StyledHeaderContainer>
+            <h1>{title}</h1>
+            <p>{description}</p>
+         </StyledHeaderContainer>
          <ul>
             {books.map(({ ordinal, title }) => (
                <li key={title}>
@@ -18,6 +35,6 @@ export default function Volume() {
             width={140}
             height={230}
          />
-      </div>
+      </StyledVolumeContainer>
    );
 }
