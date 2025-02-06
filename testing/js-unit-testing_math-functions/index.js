@@ -12,7 +12,7 @@ export function multiply(a, b) {
 
 export function divide(a, b) {
   if (b === 0) {
-    return "You should not do this!";
+    return "Can't divide a number by 0";
   }
 
   return a / b;
