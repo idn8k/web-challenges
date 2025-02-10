@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
+import ProductComponent from '@/components/ProductComponent'
 
 export default function Product() {
     const router = useRouter()
@@ -11,10 +12,10 @@ export default function Product() {
             {isLoading ? (
                 <h3>Loading...</h3>
             ) : (
-                <>
-                    <h3>{product.name}</h3>
-                    <p>{product.description}</p>
-                </>
+                <ProductComponent
+                    name={product.name}
+                    description={product.description}
+                />
             )}
         </>
     )
