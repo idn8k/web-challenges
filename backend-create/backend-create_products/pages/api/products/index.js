@@ -20,7 +20,7 @@ export default async function handler(request, response) {
 
             await Product.create(productData);
 
-            response.status(200).json({ status: 'Product was created' });
+            response.status(201).json({ status: 'Product was created' });
 
             return;
         } catch (error) {
